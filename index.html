@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elsea Lake's Psychic Tarot Test</title>
+    <!-- Updated Google Fonts link to include Great Vibes for the organic signature -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="game-container">
+        <img id="target-card" src="" alt="Hidden Tarot Card">
+        <img id="card-mask" src="darkodeck/darko_deck_back.png" alt="Card Back">
+    </div>
+
+    <div id="interaction-zone">
+        <div id="start-screen" class="game-screen text-center">
+            <!-- Updated H1 with the organic-title span -->
+            <h1><span class="organic-title">Elsea Lake's</span><br>Psychic Tarot Test</h1>
+            <p>Welcome, Seeker. The veil is thin today. Let us test your connection to the energies beyond.</p>
+            <div class="deck-options">
+                <button id="deck-enhanced" class="themed-btn active">Enhanced Deck</button>
+                <button id="deck-classic" class="themed-btn">Classic Deck</button>
+            </div>
+            <div class="difficulty-options">
+                <button id="btn-easy" class="themed-btn">Easy (2 Cards)</button>
+                <button id="btn-medium" class="themed-btn">Medium (5 Cards)</button>
+                <button id="btn-hard" class="themed-btn">Hard (22 Cards)</button>
+            </div>
+        </div>
+
+        <div id="scrying-state" class="game-screen hidden text-center">
+            <h3 id="round-tracker">Round 1 of 5</h3>
+            <button id="ready-btn" class="themed-btn">I'm Ready</button>
+        </div>
+
+        <div id="selection-state" class="game-screen hidden text-center">
+            <h3>Focus your mind and make your selection</h3>
+            <div id="grid-selection"></div>
+        </div>
+
+        <div id="revealing-state" class="game-screen hidden text-center">
+            <h3 class="pulsing-text">Piercing the veil...</h3>
+        </div>
+
+        <div id="message-area" class="game-screen hidden text-center">
+            <h2 id="message-text"></h2>
+            <button id="next-round-btn" class="themed-btn">Continue</button>
+        </div>
+
+        <div id="end-screen" class="game-screen hidden text-center">
+            <h1>The Reading is Complete</h1>
+            <h2 id="final-score"></h2>
+            <div id="final-verdict"></div>
+            <button id="restart-btn" class="themed-btn">Test Again</button>
+        </div>
+    </div>
+
+    <audio id="reveal-sfx" src="darkodeck/reveal.mp3" preload="auto"></audio>
+    <audio id="success-sfx" src="darkodeck/success.mp3" preload="auto"></audio>
+    <audio id="fail-sfx" src="darkodeck/fail.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
