@@ -2,7 +2,8 @@ const baseNames = ["the_fool", "the_magician", "the_high_priestess", "the_empres
 let arcanaDeck = baseNames.map(name => ({ name: name.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()), id: name }));
 
 let targetCard = null, currentRound = 1, score = 0, cardsInPlay = 22, gameHistory = [];
-let deckSuffix = "", deckExt = ".png";
+// New (Assuming your classic cards are .jpg files)
+let deckSuffix = "_classic", deckExt = ".jpg";
 const maxRounds = 5;
 
 window.onload = () => {
